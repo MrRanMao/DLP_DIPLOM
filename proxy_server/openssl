@@ -1,0 +1,7 @@
+
+
+ req -nodes -days 3650 -new -x509 -newkey rsa:2048 -keyout ./certs/mitmproxy-ca-key.pem -out ./certs/mitmproxy-ca-cert.pem -subj /C=RU/ST=Moscow/L=Moscow/O=Security Inc/OU=Security Inc Root CA/CN=www.securityinc.com
+
+ pkcs12 -export -in ./certs/mitmproxy-ca-cert.pem -inkey ./certs/mitmproxy-ca-key.pem -name Root Cert -out ./certs/mitmproxy-ca-cert.p12
+
+ pkcs12 -export -in ./certs/mitmproxy-ca-cert.pem -inkey ./certs/mitmproxy-ca-key.pem -name Root Cert -out ./certs/mitmproxy-ca-cert.p12
